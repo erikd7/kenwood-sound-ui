@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+/* Override browser user agent styles */
+body {
+  margin: 0;
+}

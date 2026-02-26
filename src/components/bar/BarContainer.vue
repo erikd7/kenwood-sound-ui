@@ -1,0 +1,20 @@
+<template>
+  <div class="bar-container"><Nav />Control bar</div>
+</template>
+
+<script setup>
+import Nav from './Nav.vue'
+</script>
+
+<style scoped>
+.bar-container {
+  height: 65px;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  background-color: #685d5d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+</style>
