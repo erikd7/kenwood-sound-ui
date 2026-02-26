@@ -12,19 +12,20 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useNavStore } from '@/stores/nav'
-const navStore = useNavStore()
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
 
 const { source } = defineProps({
   source: Object,
 })
 
 const onClick = () => {
-  console.log(`setting active`, source) /* //!DELETE */
-  navStore.setActiveTab(source.id)
+  router.push(`/${source.id}`)
 }
 
-const isActive = computed(() => navStore.isActive(source.id))
+const isActive = computed(() => route.params.sourceId === source.id)
 </script>
 
 <style scoped>

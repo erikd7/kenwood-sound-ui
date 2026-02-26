@@ -7,12 +7,16 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import BarContainer from '@/components/bar/BarContainer.vue'
 import FrameContainer from '@/components/frame/FrameContainer.vue'
-import { useNavStore } from '@/stores/nav'
+import sources from '@/data/sources'
 
-const navStore = useNavStore()
-const activeTabSource = computed(() => navStore.activeTabSource?.source)
+const route = useRoute()
+const activeTabSource = computed(() => {
+  const sourceId = route.params.sourceId
+  return sources[sourceId]?.source || ''
+})
 </script>
 
 <style scoped>
