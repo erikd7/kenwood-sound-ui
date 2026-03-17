@@ -3,7 +3,7 @@ export default {
     id: 'snapcast',
     name: 'Snapcast',
     icon: 'snapcast.png',
-    source: 'http://localhost:5174/',
+    source: 'http://192.168.86.100:1780/',
     enabled: true,
     default: true,
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <FrameContainer :source="activeTabSource" />
+    <FrameContainer :active-source-id="activeSourceId" />
     <BarContainer />
   </div>
 </template>
@@ -13,9 +13,18 @@ import FrameContainer from '@/components/frame/FrameContainer.vue'
 import sources from '@/data/sources'
 
 const route = useRoute()
-const activeTabSource = computed(() => {
+const defaultSourceId =
+  Object.keys(sources).find((id) => sources[id].default && sources[id].enabled) ||
+  Object.keys(sources).find((id) => sources[id].enabled) ||
+  ''
+
+const activeSource = computed(() => {
   const sourceId = route.params.sourceId
-  return sources[sourceId]?.source || ''
+  return sources[sourceId] || sources[defaultSourceId]
+})
+
+const activeSourceId = computed(() => {
+  return activeSource.value?.id || ''
 })
 </script>
 
