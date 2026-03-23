@@ -30,6 +30,8 @@ const enabledSources = computed(() => Object.values(sources).filter((source) => 
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  overscroll-behavior: contain;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .frame-container iframe {
