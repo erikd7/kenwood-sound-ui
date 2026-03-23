@@ -9,6 +9,7 @@ import Nav from './Nav.vue'
 <style scoped>
 .bar-container {
   height: 65px;
+  flex-shrink: 0;
   padding: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   background-color: #685d5d;

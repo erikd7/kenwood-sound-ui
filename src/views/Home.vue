@@ -32,6 +32,14 @@ const activeSourceId = computed(() => {
 .home-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.home-container :deep(.frame-container) {
+  flex: 1;
+  min-height: 0;
 }
 </style>
