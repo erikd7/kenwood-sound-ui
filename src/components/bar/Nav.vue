@@ -1,6 +1,8 @@
 <template>
   <div class="nav-container">
-    <NavTab v-for="source in sources" :key="source.name" :source="source" />
+    <div v-for="source in sources" :key="source.name">
+      <NavTab v-if="source.enabled" :source="source" />
+    </div>
   </div>
 </template>
 

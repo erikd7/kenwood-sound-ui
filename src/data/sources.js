@@ -19,6 +19,6 @@ export default {
     name: 'Spotify',
     icon: 'spotify.webp',
     source: 'http://192.168.86.33:3000',
-    enabled: true,
+    enabled: false,
   },
 }
