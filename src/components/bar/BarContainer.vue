@@ -1,9 +1,10 @@
 <template>
-  <div class="bar-container"><Nav />Control bar</div>
+  <div class="bar-container"><Nav /><QuickControl /></div>
 </template>
 
 <script setup>
 import Nav from './Nav.vue'
+import QuickControl from './QuickControl.vue'
 </script>
 
 <style scoped>
